@@ -3,13 +3,13 @@ description: These are a set of parameters used top comfigure your service
 labels: [input]
 body:
 - type: textarea
-  id: Service name
+  id: serviceName
   attributes:
     label: What happened?
   validations:
     required: true
 - type: textarea
-  id: Description of the service
+  id: description
   attributes:
     label: Please describe in short what will this service do
   validations:

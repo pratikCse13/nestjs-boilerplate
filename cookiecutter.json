@@ -1,0 +1,4 @@
+{
+    "service_name": "User",
+    "project_slug": "{{ cookiecutter.service_name | lower | replace(' ', '-') }}"
+}

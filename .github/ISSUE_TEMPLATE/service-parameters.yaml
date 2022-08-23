@@ -1,0 +1,16 @@
+name: Service Parameters
+description: These are a set of parameters used top comfigure your service 
+labels: [input]
+body:
+- type: textarea
+  id: Service name
+  attributes:
+    label: What happened?
+  validations:
+    required: true
+- type: textarea
+  id: Description of the service
+  attributes:
+    label: Please describe in short what will this service do
+  validations:
+    required: true

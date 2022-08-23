@@ -1,0 +1,30 @@
+name: Update cookiecutter.json
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  setup:
+    name: Reinitialize repository
+    runs-on: ubuntu-latest
+    env:
+      REPO_SETUP_TOKEN: ${{ secrets.REPO_SETUP_TOKEN }}
+    steps:
+      - name: Update cookiecutter.json based on issue form
+        uses: stefanbuck/github-issue-parser@v2
+        id: issue-parser
+        with:
+          template-path: .github/ISSUE_TEMPLATE/service-parameters.yml
+
+      - run: echo '${{ steps.issue-parser.outputs.jsonString }}' > cookiecutter.json
+
+      - run: cat cookiecutter.json
+
+      - name: Commit changes
+        shell: bash
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com" && \
+          git config --global user.name "github-actions[bot]" && \
+          git add . && \
+          git commit -m 'Updating cookiecutter.json' && \
+          git push

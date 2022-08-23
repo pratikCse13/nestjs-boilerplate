@@ -4,7 +4,7 @@ on:
     types: [opened]
 
 jobs:
-  update-cookiecutter.json:
+  update-`cookiecutter.json`:
     name: Update cookiecutter.json
     runs-on: ubuntu-latest
     env:
@@ -31,7 +31,7 @@ jobs:
           git commit -m 'Updating cookiecutter.json' && \
           git push
 
-  scaffold:
+  scaffold-project:
     name: Scaffold repository
     runs-on: ubuntu-latest
     env:

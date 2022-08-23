@@ -3,7 +3,7 @@ description: These are a set of parameters used top comfigure your service
 labels: [input]
 body:
 - type: textarea
-  id: service-name
+  id: service_name
   attributes:
     label: Service name
     description: The name of the service here please

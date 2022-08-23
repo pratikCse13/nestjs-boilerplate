@@ -5,12 +5,14 @@ body:
 - type: textarea
   id: service-name
   attributes:
-    label: The name of the service here please
+    label: Service name
+    description: The name of the service here please
   validations:
     required: true
 - type: textarea
   id: description
   attributes:
-    label: Please describe in short what will this service do
+    label: Description
+    description: Please describe in short what is the purpose of this service
   validations:
     required: true

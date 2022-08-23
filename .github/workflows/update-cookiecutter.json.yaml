@@ -10,11 +10,13 @@ jobs:
     env:
       REPO_SETUP_TOKEN: ${{ secrets.REPO_SETUP_TOKEN }}
     steps:
+      - uses: actions/checkout@v2
+      
       - name: Update cookiecutter.json based on issue form
         uses: stefanbuck/github-issue-parser@v2
         id: issue-parser
         with:
-          template-path: .github/ISSUE_TEMPLATE/service-parameters.yml
+          template-path: .github/ISSUE_TEMPLATE/service-parameters.yaml
 
       - run: echo '${{ steps.issue-parser.outputs.jsonString }}' > cookiecutter.json
 

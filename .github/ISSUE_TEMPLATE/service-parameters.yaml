@@ -3,9 +3,9 @@ description: These are a set of parameters used top comfigure your service
 labels: [input]
 body:
 - type: textarea
-  id: serviceName
+  id: service-name
   attributes:
-    label: What happened?
+    label: The name of the service here please
   validations:
     required: true
 - type: textarea

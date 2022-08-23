@@ -32,6 +32,7 @@ jobs:
           git push
 
   scaffold-project:
+    needs: update-cookiecutterJSON
     name: Scaffold repository
     runs-on: ubuntu-latest
     env:
